@@ -23,7 +23,7 @@ export abstract class SqlAppManager extends BaseAppManager {
             connection: this.knexConnectionDetails(),
             version: this.knexVersion(),
             ssl: { 
-                rejectUnauthorized: false
+                rejectUnauthorized: true
             },
         };
 
