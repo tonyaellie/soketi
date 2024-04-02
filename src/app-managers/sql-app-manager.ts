@@ -22,6 +22,7 @@ export abstract class SqlAppManager extends BaseAppManager {
             client: this.knexClientName(),
             connection: this.knexConnectionDetails(),
             version: this.knexVersion(),
+            ssl: { rejectUnauthorized: false },
         };
 
         if (this.supportsPooling() && server.options.databasePooling.enabled) {
